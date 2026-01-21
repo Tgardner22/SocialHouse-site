@@ -4,15 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Social House</title>
-  <meta name="description" content="Contact Social House Events & Planning to plan your next event or request sponsor info." />
+  <meta name="description" content="Contact Social House Events & Planning for questions, sponsorship, charity details, or event planning inquiries." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="index.html"><div class="brand-badge"></div><span>Social House</span></a>
-    <nav class="nav-links">
-      <a href="kingpin.html">Kingpin</a>
+    <a class="brand" href="index.html" aria-label="Social House home">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <span>Social House</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="kingpin.html">Annual KingPin Scramble</a>
       <a href="charity.html">Charity</a>
       <a href="events.html">Plan Your Event</a>
       <a href="contact.html">Contact</a>
@@ -24,48 +27,60 @@
   <section class="hero">
     <div class="card">
       <div class="card-pad">
-        <div class="kicker"><span class="dot"></span>Let’s build it</div>
+        <div class="kicker"><span class="dot"></span>Let’s talk</div>
         <h1>Contact</h1>
         <p>
-          Send your details and we’ll respond with a clear next step.
-          If you’re planning an event, include date window, headcount, location, goal, and budget range.
+          Use the form below or email us directly. If you’re reaching out about an event, include your date window,
+          headcount, location, and what you want the event to accomplish.
         </p>
 
         <div class="banner">
-          <strong>Fastest way:</strong>
-          <div class="small">Type + date window + headcount + location + goal + budget range</div>
+          <strong>Direct email:</strong>
+          <div class="small"><a href="mailto:ttf6276@gmail.com">ttf6276@gmail.com</a></div>
         </div>
 
-        <!-- FORM OPTION A (Recommended): Formspree -->
-        <!-- 1) Create a free form at Formspree.io -->
-        <!-- 2) Replace YOUR_FORM_ID below -->
-        <form id="form" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <input name="name" placeholder="Your name" required />
-          <input name="email" type="email" placeholder="Your email" required />
-          <input name="topic" placeholder="Topic (Kingpin / Charity / Plan an Event)" />
-          <textarea name="message" placeholder="Tell us about your event or request..."></textarea>
+        <div class="hr"></div>
+
+        <!-- Contact form -->
+        <form id="contact" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="two-col">
+            <div>
+              <label for="cname">Name</label>
+              <input id="cname" name="name" placeholder="Your name" required />
+            </div>
+            <div>
+              <label for="cemail">Email</label>
+              <input id="cemail" name="email" type="email" placeholder="Your email" required />
+            </div>
+          </div>
+
+          <label for="topic">Topic</label>
+          <input id="topic" name="topic" placeholder="KingPin / Charity / Plan an Event / Other" required />
+
+          <label for="msg">Message</label>
+          <textarea id="msg" name="message" placeholder="What can we help with?"></textarea>
+
           <button class="btn btn-primary" type="submit">Send Message</button>
-          <div class="small">If you haven’t set up Formspree yet, use the email link below.</div>
+
+          <div class="cta-row">
+            <a class="btn btn-ghost"
+               href="mailto:ttf6276@gmail.com?subject=Social%20House%20Inquiry&body=Name:%0AEmail:%0ATopic:%0AMessage:%0A">
+              Email Instead
+            </a>
+          </div>
+
+          <div class="small">
+            To make this form submit to you automatically, create a free Formspree form and replace <strong>YOUR_FORM_ID</strong>.
+            Or use the email button above for now.
+          </div>
         </form>
-
-        <!-- FORM OPTION B: Mailto fallback (works instantly) -->
-        <div class="cta-row">
-          <a class="btn btn-ghost"
-             href="mailto:info@socialhouse-events.com?subject=Social%20House%20Inquiry&body=Name:%0AEmail:%0ATopic:%0ADetails:%0A">
-            Email Instead
-          </a>
-        </div>
-
-        <div class="small" style="margin-top:10px;">
-          Email: <a href="mailto:info@socialhouse-events.com">info@socialhouse-events.com</a>
-        </div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div><strong>Social House Events & Planning</strong></div>
-    <div class="small">© <span id="year"></span></div>
+    <div class="small">© <span id="year"></span> • <a href="mailto:ttf6276@gmail.com">ttf6276@gmail.com</a></div>
   </footer>
 </main>
 
