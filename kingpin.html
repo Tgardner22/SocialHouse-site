@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kingpin | Social House Events</title>
-  <meta name="description" content="Kingpin is a signature Social House event—competitive, high-energy, and community-driven." />
+  <title>Annual KingPin Scramble | Social House</title>
+  <meta name="description" content="The Annual KingPin Scramble is Social House’s flagship event—golf + bowling, competition + community, designed for sponsors and impact." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="index.html"><div class="brand-badge"></div><span>Social House</span></a>
-    <nav class="nav-links">
-      <a href="kingpin.html">Kingpin</a>
+    <a class="brand" href="index.html" aria-label="Social House home">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <span>Social House</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="kingpin.html">Annual KingPin Scramble</a>
       <a href="charity.html">Charity</a>
       <a href="events.html">Plan Your Event</a>
       <a href="contact.html">Contact</a>
@@ -24,50 +27,75 @@
   <section class="hero">
     <div class="card">
       <div class="card-pad">
-        <div class="kicker"><span class="dot"></span>Signature event</div>
-        <h1>Kingpin</h1>
+        <div class="kicker"><span class="dot"></span>Flagship event</div>
+        <h1>Annual KingPin Scramble</h1>
         <p>
-          Kingpin is a high-energy, community-driven event built around competition, experience, and impact.
-          This page is where you’ll add date/location, registration, sponsorship tiers, and photo highlights.
+          KingPin is a proven event format combining a <strong>golf scramble + bowling tournament</strong> into one
+          high-energy day. It’s built for smooth pacing, sponsor visibility, great prizes, and real community impact.
         </p>
 
         <div class="cta-row">
-          <a class="btn btn-primary" href="contact.html">Sponsor / Register Interest</a>
-          <a class="btn btn-ghost" href="charity.html">See the Charity Mission</a>
+          <a class="btn btn-primary" href="contact.html">Sponsorship / Info Request</a>
+          <a class="btn btn-ghost" href="events.html">Plan Something Similar</a>
         </div>
 
         <div class="banner">
-          <strong>Coming soon:</strong>
-          <div class="small">Event details • sponsorship deck • raffle/prize highlights • past-year recap</div>
+          <strong>Next event: June 6</strong>
+          <div class="small">Countdown: <span id="kingpin-countdown">loading…</span></div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <h2>What to expect</h2>
+    <h2>What makes it work</h2>
     <div class="grid">
       <div class="tile">
-        <h3>Competition + fun</h3>
-        <p>Format designed to keep teams engaged and moving—no dead time.</p>
+        <h3>Format that keeps people moving</h3>
+        <p>Clean flow, minimal dead time, and a run-of-show designed to feel premium.</p>
       </div>
       <div class="tile">
-        <h3>Prizes + raffles</h3>
-        <p>High-quality giveaways that make people want to come back next year.</p>
+        <h3>Sponsor visibility that’s real</h3>
+        <p>Packages are built into the experience—signage, announcements, placements, and deliverables.</p>
       </div>
       <div class="tile">
-        <h3>Sponsor value</h3>
-        <p>Real placements and visibility—built into the event flow, not an afterthought.</p>
+        <h3>Prizes + raffles people want</h3>
+        <p>Great prizes drive attendance, participation, and year-to-year momentum.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <div class="card-pad">
+        <h2>Coming soon (easy upgrades)</h2>
+        <div class="grid">
+          <div class="tile">
+            <h3>Photo gallery</h3>
+            <p>Add event photos to instantly boost credibility and sponsor interest.</p>
+          </div>
+          <div class="tile">
+            <h3>Registration link</h3>
+            <p>Add a registration button (Google Form, Eventbrite, etc.).</p>
+          </div>
+          <div class="tile">
+            <h3>Sponsorship deck</h3>
+            <p>Upload your PDF deck and add “Download Sponsorship Packet.”</p>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="small">Questions? Email <a href="mailto:ttf6276@gmail.com">ttf6276@gmail.com</a></div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div><strong>Social House Events & Planning</strong></div>
-    <div class="small">Email: <a href="mailto:info@socialhouse-events.com">info@socialhouse-events.com</a></div>
+    <div class="small">© <span id="year"></span> • <a href="mailto:ttf6276@gmail.com">ttf6276@gmail.com</a></div>
   </footer>
 </main>
 
 <script src="script.js"></script>
 </body>
 </html>
+
