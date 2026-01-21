@@ -4,15 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Plan Your Event | Social House</title>
-  <meta name="description" content="Plan your next event with Social House—social, corporate, or charity. Clear structure, smooth execution." />
+  <meta name="description" content="Request a quote for your next event. Social House plans and executes corporate, charity, and private events with structure and energy." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="index.html"><div class="brand-badge"></div><span>Social House</span></a>
-    <nav class="nav-links">
-      <a href="kingpin.html">Kingpin</a>
+    <a class="brand" href="index.html" aria-label="Social House home">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <span>Social House</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="kingpin.html">Annual KingPin Scramble</a>
       <a href="charity.html">Charity</a>
       <a href="events.html">Plan Your Event</a>
       <a href="contact.html">Contact</a>
@@ -24,63 +27,103 @@
   <section class="hero">
     <div class="card">
       <div class="card-pad">
-        <div class="kicker"><span class="dot"></span>Fast, structured, sponsor-friendly</div>
-        <h1>Plan Your Next Event</h1>
+        <div class="kicker"><span class="dot"></span>Quote request</div>
+        <h1>Plan Your Event</h1>
         <p>
-          Tell us your goal and we’ll design a plan that’s realistic, organized, and high-impact—without the chaos.
-          Social events, corporate outings, fundraisers, and more.
+          Fill out the quote request below and we’ll follow up with next steps, a clear scope,
+          and a realistic quote range.
         </p>
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="contact.html#form">Request a Quote</a>
-          <a class="btn btn-ghost" href="contact.html">Ask a Quick Question</a>
-        </div>
-
         <div class="banner">
-          <strong>Best results come from clarity.</strong>
-          <div class="small">Date window • headcount • location • goal • budget range</div>
+          <strong>Tip:</strong>
+          <div class="small">The more detail you provide, the faster we can quote accurately.</div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <h2>What we can handle</h2>
-    <div class="grid">
-      <div class="tile">
-        <h3>Event structure</h3>
-        <p>Format, timeline, run-of-show, pacing, and guest experience.</p>
-      </div>
-      <div class="tile">
-        <h3>Sponsorship packages</h3>
-        <p>Tiers, deliverables, placements, and outreach flow.</p>
-      </div>
-      <div class="tile">
-        <h3>Logistics + vendors</h3>
-        <p>Venue coordination, check-in flow, signage, and day-of execution support.</p>
-      </div>
-    </div>
-  </section>
+        <div class="hr"></div>
 
-  <section class="section">
-    <div class="card">
-      <div class="card-pad">
-        <h2>Fast intake (copy/paste into the contact form)</h2>
-        <ul style="color:var(--muted); line-height:1.7; margin-top:10px;">
-          <li><strong>Type:</strong> social / corporate / charity</li>
-          <li><strong>Date window:</strong> (ideal + backup)</li>
-          <li><strong>Headcount:</strong> expected guests</li>
-          <li><strong>Goal:</strong> raise $___ or host ___</li>
-          <li><strong>Budget range:</strong> $___</li>
-          <li><strong>Location:</strong> city/state</li>
-        </ul>
+        <!-- Quote form -->
+        <!-- Option A: Use Formspree (recommended). Replace YOUR_FORM_ID when ready. -->
+        <!-- Option B: Use the Email button below (works immediately). -->
+        <form id="quote" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="two-col">
+            <div>
+              <label for="name">Full Name</label>
+              <input id="name" name="name" placeholder="Full name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="Email" required />
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" placeholder="Phone number" />
+            </div>
+            <div>
+              <label for="type">Type of Event</label>
+              <input id="type" name="event_type" placeholder="Corporate / Charity / Private / Other" required />
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <label for="people">Estimated Headcount</label>
+              <input id="people" name="headcount" placeholder="How many people?" required />
+            </div>
+            <div>
+              <label for="location">Location</label>
+              <input id="location" name="location" placeholder="City/State or venue" />
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <label for="date">Date</label>
+              <input id="date" name="date" placeholder="Preferred date + backup date" required />
+            </div>
+            <div>
+              <label for="time">Time</label>
+              <input id="time" name="time" placeholder="Start/end or general window" />
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <label for="budget">Budget Range (optional)</label>
+              <input id="budget" name="budget" placeholder="$ (optional)" />
+            </div>
+            <div>
+              <label for="goal">Goal / Purpose</label>
+              <input id="goal" name="goal" placeholder="Raise funds, celebrate, team building, etc." />
+            </div>
+          </div>
+
+          <label for="details">Details</label>
+          <textarea id="details" name="details" placeholder="Tell us what you want the event to feel like, must-haves, any constraints, etc."></textarea>
+
+          <button class="btn btn-primary" type="submit">Submit Quote Request</button>
+
+          <div class="cta-row">
+            <a class="btn btn-ghost"
+               href="mailto:ttf6276@gmail.com?subject=Event%20Quote%20Request%20-%20Social%20House&body=Name:%0AEmail:%0APhone:%0AType%20of%20Event:%0AHeadcount:%0ADate:%0ATime:%0ALocation:%0ABudget:%0AGoal:%0ADetails:%0A">
+              Email Quote Request Instead
+            </a>
+          </div>
+
+          <div class="small">
+            Note: To make the form submit to you automatically, create a free Formspree form and replace <strong>YOUR_FORM_ID</strong>.
+            Or just use the email button above for now.
+          </div>
+        </form>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div><strong>Social House Events & Planning</strong></div>
-    <div class="small">Email: <a href="mailto:info@socialhouse-events.com">info@socialhouse-events.com</a></div>
+    <div class="small">© <span id="year"></span> • <a href="mailto:ttf6276@gmail.com">ttf6276@gmail.com</a></div>
   </footer>
 </main>
 
